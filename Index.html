@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Superheroes transformándose: DC y Marvel</title>
+  </head>
+  <body>
+    <!-- Superman/Clark Kent -->
+    <p id="super">Clark Kent</p>
+    <p id="superimg">
+      <img
+        id="heroImage"
+        src="https://pbs.twimg.com/media/GMI5M9nWQAADpp7?format=jpg&name=large"
+        height="200px"
+      />
+    </p>
+    <button type="button" onclick="toggleHero()">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Superman_S_symbol.svg/621px-Superman_S_symbol.svg.png"
+        height="50px"
+      />
+    </button>
+
+    <!-- Batman/Bruce Wayne -->
+    <p id="Bat">Bruce Wayne</p>
+    <p id="Batimg">
+      <img
+        id="BatImage"
+        src="https://i.pinimg.com/736x/48/51/60/485160c55c513f8eac38027385f38a52.jpg"
+        height="200px"
+      />
+    </p>
+    <button type="button" onclick="toggleBat()">
+      <img
+        src="https://1000marcas.net/wp-content/uploads/2019/11/Batman-Logo-1966.png"
+        height="50px"
+      />
+    </button>
+
+    <script>
+      // Cambiar entre Clark Kent y Superman
+      function toggleHero() {
+        var element = document.getElementById("super");
+        var image = document.getElementById("heroImage");
+
+        if (element.innerHTML === "Clark Kent") {
+          element.innerHTML = "Superman";
+          image.src =
+            "https://media.newyorker.com/photos/5909527c1c7a8e33fb38a864/master/pass/Man_of_Steel-580.jpeg"; // Nueva imagen (Superman)
+        } else {
+          element.innerHTML = "Clark Kent";
+          image.src =
+            "https://pbs.twimg.com/media/GMI5M9nWQAADpp7?format=jpg&name=large"; // Imagen original (Clark Kent)
+        }
+      }
+
+      // Cambiar entre Bruce Wayne y Batman
+      function toggleBat() {
+        var element = document.getElementById("Bat");
+        var image = document.getElementById("BatImage");
+
+        if (element.innerHTML === "Bruce Wayne") {
+          element.innerHTML = "Batman";
+          image.src =
+            "https://bandai.com.mx/blog/wp-content/uploads/2019/09/Historia-de-Batman-el-superhe%CC%81roe-ma%CC%81s-popular-en-la-era-digital-copia-1.jpg"; // Nueva imagen (Batman)
+        } else {
+          element.innerHTML = "Bruce Wayne";
+          image.src =
+            "https://i.pinimg.com/736x/48/51/60/485160c55c513f8eac38027385f38a52.jpg"; // Imagen original (Bruce Wayne)
+        }
+      }
+    </script>
+  </body>
+</html>
